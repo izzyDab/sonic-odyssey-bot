@@ -109,7 +109,7 @@ const { displayHeader } = require('./src/displayUtils');
     return x;
   };
     if (isNaN(delayBetweenTx()) || delayBetweenTx() < 0) {
-    console.log(colors.red('Invalid delay specified'));
+    throw new Error(colors.red('Invalid delay specified'));
   }
   
 /*  const defaultDelay = 1000;
